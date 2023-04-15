@@ -1,0 +1,148 @@
+/**** Fondo de la sección ****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/**** BANNER -foto representativa- ****/
+.banner-class{
+    position: relative;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.banner-class img{
+    object-fit: cover;
+    object-position: 30% 40%;
+    width: 100%;
+    height: 40vw;
+    opacity: .1;
+}
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/**** NOMBRE y VOCACIÓN ****/
+#name, #slogan-text {
+    padding: 10px;
+}
+
+#name {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: bold;
+}
+
+#slogan-text {
+    font-family: 'Dosis', 'Helvética', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#slogan-color {
+    background-color: rgb(var(--bs-element-one-rgb), .8);
+    border-radius: 20px;
+    padding: .2em .3em;
+}
+
+@media (min-width:768px){
+    /* mayores a 768px */
+    #name {
+        color:#eee;
+        font-weight: bold;
+        font-size:3.5vw;
+        text-shadow: 1px 1px #333;
+        text-align: left;
+    }
+    #slogan-text {
+        color: #eee;
+        text-align: left;
+        font-weight:250;
+        font-style:italic;
+        font-size:2.6vw;
+        text-shadow: 1px 1px #333;
+    }
+}
+
+/*****
+        CAJA 'SOBRE MÍ'
+        ABOUT BOX
+*****/
+
+#avatar {
+    width: 100%;
+    outline: 10px solid #eee;
+}
+
+.about-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2em auto;
+    padding: 2%;
+    width: 80%;
+    height: auto;
+    border-radius: 3rem 3rem 0 0;
+    background-color: #312c1e;
+}
+
+.about-text {
+    display: inline-block;
+    color: white;
+    border-radius: 10px;
+}
+
+.about-text>h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.3em;
+    padding: .7em 0;
+}
+
+.about-text>p {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+@media (max-width:768px){
+    /* menores a 768px */
+    .banner-class img{
+        object-fit: cover;
+        object-position: 30% 90%;
+        width: 100%;
+        height: 84vw;
+        opacity: .2;
+    }
+    #name {
+        color: #eee;
+        font-weight: bold;
+        font-size:6vw;
+        text-align: center;
+    }
+    #slogan-text {
+        color:#eee;
+        font-weight:250;
+        font-style:italic;
+        font-size:3.5vw;
+        text-align: center;
+    }
+    .col-class {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #avatar {
+        padding-top: 10px;
+        width: 50%;
+        outline: 10px solid #eee;
+    }
+}

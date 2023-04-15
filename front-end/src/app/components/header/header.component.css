@@ -1,0 +1,132 @@
+body {
+    font-family: 'Encode Sans', Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 50px;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-class {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+#logo-img {
+    height: 80px;
+    margin-right: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+/*****
+    Redes sociales //// Social media
+*****/
+
+.button-social {
+    background-color: var(--bs-element-one);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.button-social-color {
+    color:var(--bs-gray-500);
+}
+.button-social-color:hover {
+    color:var(--bs-gray-100);
+}
+.button-social-anim:hover {
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+/*****
+    Botón de iniciar sesión
+    Login button 
+*****/
+.button-login {
+    cursor: pointer;
+    padding: 4vh 3vw;
+    width: auto;
+    margin-left: 70px;
+    font-size: 25px;
+    background-color: var(--bs-dark);
+    color: #d9d9d9;
+    font-family: 'Dosis', 'Helvética', sans-serif;
+    font-weight: 200;
+}
+
+.button-login:hover {
+    background-color: var(--bs-element-one);
+    color: white;
+}
+
+.button-login-anim:hover {
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.button-login:active {
+    background-color: #312c1e;
+}
+
+@media (max-width:980px) {
+    /**** vista del header // header view ****/
+    header {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    nav {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .nav-class {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 15px;
+    }
+    #logo-img {
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .button-login {
+        display: flex;
+        align-items: flex-end;
+        width: 100vw;
+        padding: 0 10px 0 0;
+        margin: 0 10px 0 0;
+        font-size: 25px;
+        background-color: var(--bs-dark);
+        color: #d9d9d9;
+        font-family: 'Dosis', 'Helvética', sans-serif;
+        font-weight: 200;
+    }
+}
