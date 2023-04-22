@@ -18,7 +18,7 @@
     object-fit: cover;
     object-position: 30% 40%;
     width: 100%;
-    height: 40vw;
+    height: 85vh;
     opacity: .1;
 }
 
@@ -73,6 +73,46 @@
     }
 }
 
+/***** 
+        Botón ir hacia arriba
+        Go-to-top button
+*****/
+
+.button-down{
+    text-align:center;
+}
+.button-down span{
+    display: block; 
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    cursor: pointer;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #b0afaf;
+    text-align: center;
+}
+
+.button-down i{
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
+    color: #b0afaf;
+}
+@keyframes pulsate{
+    0%{
+        transform:scale(1, 1)
+    }
+    50%{
+        transform:scale(1.2, 1.2)
+    }
+    100%{
+        transform:scale(1, 1)
+    }
+}
+
 /*****
         CAJA 'SOBRE MÍ'
         ABOUT BOX
@@ -119,7 +159,7 @@
         object-fit: cover;
         object-position: 30% 90%;
         width: 100%;
-        height: 84vw;
+        height: 70vh;
         opacity: .2;
     }
     #name {

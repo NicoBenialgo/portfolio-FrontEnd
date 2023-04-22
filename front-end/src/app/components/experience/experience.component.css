@@ -1,0 +1,63 @@
+.experience-class {
+    margin: 2em auto;
+    padding: 2%;
+    width: 80%;
+    height: auto;
+    background-color: rgb(7, 36, 50);
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.enterprise-academy {
+    width: 16vw;
+    max-width: 120px;
+}
+
+.container-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 2vw;
+    margin: 2vh 2vw;
+    background-color: rgb(11, 48, 66);
+    border-radius: 20px;
+}
+
+@media (max-width:767px){
+    /* menores a 768px */
+    h2 {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 5.5vw;
+    }
+    h3 {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 4.4vw;
+    }
+    h4 {
+        font-size: 3.5vw;
+    }
+    .container-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        padding: 4vh 2vw;
+        margin: 1vh 1vw;
+        border-radius: 10px;
+    }
+    .container-bar div {
+        padding: 10px;
+    }
+}
