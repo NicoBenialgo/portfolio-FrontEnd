@@ -1,19 +1,36 @@
 <header>
-    <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">
-        <div class="logo">
+    <nav>
+        <div class="logo-class">
+            <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">
             <img src="../../../assets/logoap-simpleblack.png" alt="Argentina Programa" id="logo-img">
             <h2>Argentina Programa</h2>
+            </a>
         </div>
-    </a>
-    <nav>
         <div class="nav-class">
             <span class="button-social d-flex justify-content-center align-items-center"><a href="https://www.facebook.com/nicobenialgo/"><span class="fa-brands fa-facebook fa-2x button-social-color button-social-anim" id="facebook" title="Facebook"></span></a></span>
             <span class="button-social d-flex justify-content-center align-items-center"><a href="https://www.instagram.com/nicobenialgo/"><span class="fa-brands fa-instagram fa-2x button-social-color button-social-anim" id="instagram" title="Instagram"></span></a></span>
             <span class="button-social d-flex justify-content-center align-items-center"><a href="https://www.linkedin.com/in/nicobenialgo"><span class="fa-brands fa-linkedin fa-2x button-social-color button-social-anim" id="linkedin" title="LinkedIn"></span></a></span>
             <span class="button-social d-flex justify-content-center align-items-center"><a href="https://github.com/NicoBenialgo"><span class="fa-brands fa-github fa-2x button-social-color button-social-anim" id="github" title="GitHub"></span></a></span>
-        </div>
-        <div class="nav-class">
-            <a href="login.html" class="button-login button-login-anim" target="_self">Iniciar sesión</a>
+            <button class="button-login button-login-anim button-sidebar" id="open" href="javascript:void(0)" onclick="mostrar()"><i class="fa-solid fa-user fa-xl"></i> Iniciar sesión</button>
+            <button class="button-login button-login-anim button-sidebar" id="close" href="javascript:void(0)" onclick="ocultar()"><i class="fa-solid fa-user fa-xl"></i> Iniciar sesión</button>
         </div>
     </nav>
+    <div class="row">
+        <div class="col banner-class">
+            <img src="../../../assets/img-banner.jpg" class="img-fluid">
+        </div>
+        <div class="col banner-text">
+            <h1 id="name">Nicolas Federico Benialgo</h1>
+            <p id="slogan-text"><span id="slogan-color">Full Stack Developer Jr.</span></p>
+        </div>
+    </div>
+    <div class="col" id="button-down">
+        <span>
+            <a href="#scroll">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </span>
+    </div>
 </header>
+<app-login></app-login>
+<div id="scroll"></div>

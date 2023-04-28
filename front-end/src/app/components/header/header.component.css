@@ -3,19 +3,14 @@ body {
     margin: 0;
 }
 
-header {
+nav {
     display: flex;
+    align-items: center;
     min-height: 50px;
     background: var(--bs-body-bg);
     color: var(--bs-body-color);
     justify-content: space-between;
-    align-items: center;
     padding: 3px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
 }
 
 .nav-class {
@@ -24,8 +19,9 @@ nav {
     align-items: center;
 }
 
-.logo {
+.logo-class {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -72,7 +68,7 @@ a {
 *****/
 .button-login {
     cursor: pointer;
-    padding: 4vh 3vw;
+    padding: 3vh 2vw;
     width: auto;
     margin-left: 70px;
     font-size: 25px;
@@ -87,13 +83,15 @@ a {
     color: white;
 }
 
-.button-login-anim:hover {
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
 .button-login:active {
     background-color: #312c1e;
+}
+
+#open {
+    /* empty */
+}
+#close {
+    display:none;
 }
 
 @media (max-width:980px) {
@@ -128,5 +126,121 @@ a {
         color: #d9d9d9;
         font-family: 'Dosis', 'Helvética', sans-serif;
         font-weight: 200;
+    }
+}
+
+
+/**** BANNER -foto representativa- ****/
+.banner-class{
+    position: relative;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.banner-class img{
+    object-fit: cover;
+    object-position: 30% 40%;
+    width: 100%;
+    height: 85vh;
+    opacity: .1;
+}
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/**** NOMBRE y VOCACIÓN ****/
+#name, #slogan-text {
+    padding: 10px;
+}
+
+#name {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: bold;
+}
+
+#slogan-text {
+    font-family: 'Dosis', 'Helvética', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#slogan-color {
+    background-color: rgb(var(--bs-element-one-rgb), .8);
+    border-radius: 20px;
+    padding: .2em .3em;
+}
+
+@media (min-width:768px){
+    /* mayores a 768px */
+    #name {
+        color:#eee;
+        font-weight: bold;
+        font-size:3.5vw;
+        text-shadow: 1px 1px #333;
+        text-align: left;
+    }
+    #slogan-text {
+        color: #eee;
+        text-align: left;
+        font-weight:250;
+        font-style:italic;
+        font-size:2.6vw;
+        text-shadow: 1px 1px #333;
+    }
+    .banner-class img{
+        object-fit: cover;
+        object-position: 30% 90%;
+        width: 100%;
+        height: 85vh;
+        opacity: .2;
+    }
+}
+
+/***** 
+        Botón ir hacia abajo
+        Go-to-bottom button
+*****/
+
+#button-down{
+    text-align:center;
+}
+#button-down span{
+    display: block; 
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    cursor: pointer;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #b0afaf;
+    text-align: center;
+}
+
+#button-down i{
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
+    color: #b0afaf;
+}
+@keyframes pulsate{
+    0%{
+        transform:scale(1, 1)
+    }
+    50%{
+        transform:scale(1.2, 1.2)
+    }
+    100%{
+        transform:scale(1, 1)
     }
 }
