@@ -4,16 +4,26 @@ body {
 }
 
 nav {
+    min-height: 50px;
+    background-color: #212121;
+    background-attachment: fixed;
+    color: var(--bs-body-color);
+    padding: 3px;
     display: flex;
     align-items: center;
-    min-height: 50px;
-    background: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    justify-content: space-between;
-    padding: 3px;
+    justify-content: space-evenly;
 }
 
-.nav-class {
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.social-class,.login-class {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -34,7 +44,7 @@ a {
 }
 
 #logo-img {
-    height: 80px;
+    height: 50px;
     margin-right: 20px;
     margin-left: 20px;
     overflow: hidden;
@@ -46,10 +56,10 @@ a {
 
 .button-social {
     background-color: var(--bs-element-one);
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 .button-social-color {
     color:var(--bs-gray-500);
@@ -88,47 +98,11 @@ a {
 }
 
 #open {
-    /* empty */
+    display: block;
 }
 #close {
     display:none;
 }
-
-@media (max-width:980px) {
-    /**** vista del header // header view ****/
-    header {
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    nav {
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    .nav-class {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-top: 15px;
-    }
-    #logo-img {
-        height: 50px;
-        margin: 0 auto;
-    }
-
-    .button-login {
-        display: flex;
-        align-items: flex-end;
-        width: 100vw;
-        padding: 0 10px 0 0;
-        margin: 0 10px 0 0;
-        font-size: 25px;
-        background-color: var(--bs-dark);
-        color: #d9d9d9;
-        font-family: 'Dosis', 'Helvética', sans-serif;
-        font-weight: 200;
-    }
-}
-
 
 /**** BANNER -foto representativa- ****/
 .banner-class{
@@ -159,50 +133,29 @@ a {
 
 /**** NOMBRE y VOCACIÓN ****/
 #name, #slogan-text {
-    padding: 10px;
+    padding: 10px 0 10px 30px;
 }
 
 #name {
     font-family: var(--bs-font-sans-serif);
+    color:#eee;
     font-weight: bold;
+    text-shadow: 1px 1px #333;
 }
 
 #slogan-text {
     font-family: 'Dosis', 'Helvética', sans-serif;
     font-weight: 200;
     font-style: italic;
+    color: #eee;
+    text-shadow: 1px 1px #333;
+    font-weight:250;
 }
 
 #slogan-color {
     background-color: rgb(var(--bs-element-one-rgb), .8);
     border-radius: 20px;
     padding: .2em .3em;
-}
-
-@media (min-width:768px){
-    /* mayores a 768px */
-    #name {
-        color:#eee;
-        font-weight: bold;
-        font-size:3.5vw;
-        text-shadow: 1px 1px #333;
-        text-align: left;
-    }
-    #slogan-text {
-        color: #eee;
-        text-align: left;
-        font-weight:250;
-        font-style:italic;
-        font-size:2.6vw;
-        text-shadow: 1px 1px #333;
-    }
-    .banner-class img{
-        object-fit: cover;
-        object-position: 30% 90%;
-        width: 100%;
-        height: 85vh;
-        opacity: .2;
-    }
 }
 
 /***** 
@@ -242,5 +195,89 @@ a {
     }
     100%{
         transform:scale(1, 1)
+    }
+}
+
+@media (min-width:981px){
+    /* mayores a 980px */
+    #name {
+        font-size:3.5vw;
+        text-align: left;
+    }
+    #slogan-text {
+        text-align: left;
+        font-size:2.6vw;
+    }
+    .banner-class img{
+        object-fit: cover;
+        object-position: 30%;
+        width: 100%;
+        height: 95vh;
+        opacity: .2;
+    }
+}
+
+@media (max-width:980px) {
+    /* menores a 980px */
+    #name {
+        font-size:5.5vw;
+        text-align: center;
+    }
+    #slogan-text {
+        text-align: center;
+        font-size:3.8vw;
+    }
+    .banner-class img{
+        object-fit: cover;
+        object-position: 40%;
+        width: 100vw;
+        height: 85vh;
+        opacity: .2;
+    }
+    .banner-text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /**** vista del header // header view ****/
+    nav {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .social-class {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+    .login-class {
+        padding-top: 10px;
+    }
+    #logo-img {
+        height: 50px;
+        margin: 0 auto;
+    }
+    .fa-user {
+        display: none;
+    }
+    .button-login {
+        display: block;
+        width: 200px;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 25px;
+        background-color: var(--bs-dark);
+        text-align: center;
+        color: #d9d9d9;
+        font-family: 'Dosis', 'Helvética', sans-serif;
+        font-weight: 200;
+    }
+
+    #button-down{
+        display: none;
     }
 }

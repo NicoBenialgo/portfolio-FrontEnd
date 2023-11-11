@@ -1,16 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
-declare function ocultar():void;
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
-  ngOnInit(): void {
-    setTimeout(() => {
-      ocultar();
-    }, 2000);
-}
+export class LoginComponent {
+
 }
